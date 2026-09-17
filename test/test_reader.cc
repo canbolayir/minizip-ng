@@ -37,7 +37,7 @@ TEST(zip_reader_hash, rejects_oversized_digest) {
     void *writer = mz_zip_writer_create();
     void *reader = mz_zip_reader_create();
     mz_zip_file file_info = {};
-    int32_t zip_buffer_length = 0;
+    int64_t zip_buffer_length = 0;
 
     ASSERT_NE(mem_stream, nullptr);
     ASSERT_NE(writer, nullptr);
